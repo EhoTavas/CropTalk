@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* Default */
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #fefae0;
+    font-family: 'Overlock', cursive;
+}
+
+section {
+    display: flex;
+    position: relative;
+    top: 200px;
+    width: 100vw;
+    height: 500px;
+    background: #a9b388;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+    margin: 100px 0px;
+}
+
+
+/* Header */
+header {
+    position: relative;
+    display: flex;
+    background: #a9b388;
+    height: 50px;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%;
+}
+
+li, a {
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    background: #a9b388;
+}
+
+.navLinks {
+    list-style: none;
+    background-color: #a9b388;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0px 20px;
+    background: #a9b388;
+}
+
+.navLinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+a {
+    background: #5f6f52;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #fefae0;
+}
+
+.navLinks li a:hover {
+    padding: 10px 20px;
+    text-decoration: underline;
+}
+
+
+/* Section */
+#introDesc * {
+    background: #a9b388;
+}
+
+.intro img {
+    height: 370px;
+    width: 657.77;
+    border-radius: 7px;
+}
+
+#introDesc {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+#introDesc * {
+    padding: 5px;
+}
+
+#introDesc p {
+    font-size: 35px;
+    text-align: center;
+}
+
+#introLinkDiv {
+    display: flex;
+    background: #a9b388;
+    align-items: center;
+    justify-content: center;
+}
+
+#introLink {
+    text-align: center;
+    margin: 15px;
+    width: 90px;
+    padding: 10px 20px;
+    transition: all 0.3s ease 0s;
+    background: #5f6f52;
+}
+
+#introLink:hover {
+    padding: 12px 27px;
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    position: relative;
+    display: flex;
+    margin-top: 100px;
+    bottom: 0px;
+    width: 100vw;
+    height: 300px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 400px;
+    /* border: 2px solid red; */
+}
+
+footer, footer * {
+    background-color: #b99470;
+    color: #fefae0;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.description h2 {
+    font-size: 30px;
+}

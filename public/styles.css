@@ -34,6 +34,19 @@ header {
     padding: 25px 5%;
 }
 
+#logoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 190px;
+}
+
+#logoContainer img {
+    width: 50px;
+    height: 50px;
+}
+
 li, a {
     font-weight: 300;
     font-size: 20px;
@@ -70,11 +83,11 @@ a {
 
 .navLinks li a:hover {
     padding: 10px 20px;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 
-/* Section */
+/* Intro Section */
 #introDesc * {
     background: #a9b388;
 }
@@ -120,7 +133,49 @@ a {
 
 #introLink:hover {
     padding: 12px 27px;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* Cards Section */
+.cardsSection {
+    background: #fefae0;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 270px;
+    height: 400px;
+    background: #b99470;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
+    transition: ease 0.7s;
+    /* border: 2px solid red; */
+}
+
+.cards:hover {
+    width: 297px;
+    height: 440px;
+}
+
+.cards img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
+    transition: ease 0.5s;
+}
+
+.cards:hover img {
+    width: 220px;
+    height: 220px;
+}
+
+.cards h3 {
+    font-size: 30px;
+    color: #fefae0;
 }
 
 

@@ -1,0 +1,72 @@
+/* Error 404 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans=serif;
+    min-height: 100vh;
+}
+
+.container{
+    width: 100%;
+    position: absolute;
+    top: 38%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 18px;
+    color: #5f6f52;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    /*responsividade */
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos para telas menores (exemplo: até 768px de largura) */
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Estilos para telas médias (exemplo: de 769px a 1024px de largura) */
+}
+
+@media screen and (min-width: 1025px) {
+    /* Estilos para telas maiores (exemplo: acima de 1025px de largura) */
+}
+
+
+/*texto error*/
+
+.container a{
+    text-decoration: none;
+    background: #0ba410;
+    color: #fff;
+    padding: 12px 20px;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+/*transparencia imagem*/
+.imagem-transparente {
+    opacity: 0.2;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../public/images/grao.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Define a altura para cobrir toda a tela */
+    overflow: hidden; /* Evita barras de rolagem */
+    background-attachment: fixed; /* Torna a imagem de fundo fixa */
+    background-repeat: no-repeat;
+}
+
+/* Estilo para o conteúdo na página */
+.conteudo {
+    padding: 120px;
+}

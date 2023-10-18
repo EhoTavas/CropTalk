@@ -1,0 +1,103 @@
+/* Intro login*/
+#welcomeSection {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #FCFCE4;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: larger;
+    margin: 0px 0px;
+}
+
+/* Cards Section */
+
+.Login {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background: #fefae0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
+    transition: ease 0.7s;
+}
+
+.Login h2 {
+    color: #5f6f52;
+}
+
+.TextField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    margin: 0px;
+}
+
+.Login input {
+    width: 200px;
+    padding: 5px;
+    background: #fefae0;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.473);
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.Login label {
+    position: relative;
+    left: -70px;
+    top: -25px;
+    color: rgba(0, 0, 0, 0.459);
+    transition: 0.5s ease;
+}
+
+.Login input:focus {
+    border-bottom: 2px solid rgb(140, 186, 255);
+}
+
+.Login input:focus ~ label {
+    transform: translateY(-25px);
+    color: rgb(140, 186, 255);
+}
+
+.Login input:valid {
+    border-bottom: 2px solid #a1d874;
+}
+
+.Login input:valid ~ label {
+    color: #a1d874;
+    transform: translateY(-25px);
+}
+
+.Login .BtnDiv {
+    display: flex;
+    width: 100px;
+    height: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.Login button {
+    padding: 7px 70px;
+    background: #5f6f52;
+    color: #fefae0;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.Login button:hover {
+    padding: 10px 80px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
+}

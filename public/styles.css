@@ -70,10 +70,6 @@ li, a {
     background: #a9b388;
 }
 
-.navLinks li a {
-    transition: all 0.3s ease 0s;
-}
-
 a {
     background: #5f6f52;
     padding: 5px 10px;
@@ -81,9 +77,17 @@ a {
     color: #fefae0;
 }
 
+.navLinks li a {
+    background: #a9b388;
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
 .navLinks li a:hover {
     padding: 10px 20px;
     text-decoration: none;
+    background: #5f6f52;
+    color: #fefae0;
 }
 
 
@@ -146,7 +150,7 @@ a {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    width: 270px;
+    width: 243px;
     height: 400px;
     background: #b99470;
     border-radius: 20px;
@@ -155,7 +159,7 @@ a {
 }
 
 .cards:hover {
-    width: 297px;
+    width: 282px;
     height: 440px;
 }
 

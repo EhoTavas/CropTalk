@@ -1,0 +1,107 @@
+/* Intro login*/
+#textSection {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #FCFCE4;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: larger;
+    margin: 50px 0px;
+}
+
+#textSection div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#textSection p {
+    color: rgba(0, 0, 0, 0.425);
+}
+
+#textSection input {
+    width: 350px;
+    height: 100px;
+    background: #b99470a2;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+/* Cards Section */
+.CardsSection {
+    background: #fefae0;
+    margin-bottom: 200px;
+}
+
+.Cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 243px;
+    height: 400px;
+    background: #b99470;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
+    transition: ease 0.7s;
+    border: none;
+}
+
+.Cards:hover {
+    width: 282px;
+    height: 440px;
+    cursor: pointer;
+}
+
+.Cards img {
+    width: 200px;
+    height: 220px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
+    transition: ease 0.5s;
+}
+
+.Cards:hover img {
+    width: 220px;
+    height: 240px;
+}
+
+.Cards h3 {
+    font-size: 30px;
+    color: #fefae0;
+}
+
+/* Button Section */
+#buttonSection {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #FCFCE4;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: larger;
+    margin-top: 200px;
+    margin-bottom: -100px;
+}
+
+#buttonSection button {
+    background: #b99470;
+    color: #fefae0;
+    border: none;
+    border-radius: 15px;
+    width: 120px;
+    height: 50px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.219);
+    transition: 0.5s ease;
+}
+
+#buttonSection button:hover {
+    width: 130px;
+    height: 55px;
+    cursor: pointer;
+}

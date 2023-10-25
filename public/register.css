@@ -11,12 +11,20 @@
     margin: 0px 0px;
 }
 
-/* Section Register */
-#sectionRegister {
-    height: 900px;
+/* Cards Section */
+.Sides {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-/* Cards Section */
+.LeftSide, .RightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .cardsSectionLogin {
     background: #DFE9C1;
 }
@@ -26,8 +34,8 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    width: 300px;
-    height: 800px;
+    width: 600px;
+    height: 400px;
     background: #fefae0;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
@@ -44,7 +52,7 @@
     align-items: center;
     justify-content: center;
     width: 100px;
-    height: 50px;
+    height: 70px;
     margin: 0px;
 }
 

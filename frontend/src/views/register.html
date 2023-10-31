@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../public/styles.css" />
+    <link rel="stylesheet" href="../../public/register.css" />
+    <title>Crop Talk</title>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header>
+      <div id="logoContainer">
+        <img src="../../public/images/logo.jpg" />
+        <a class="logo" href="index.html">Crop Talk</a>
+      </div>
+
+      <nav>
+        <ul class="navLinks">
+          <li><a href="login.html">Entrar</a></li>
+          <li><a href="register.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section id="welcomeSection">
+      <div>
+        <h3>Faça seu login para usar nossas funcionalidades!</h3>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section id="sectionRegister">
+      <form class="Register" method="post">
+        <h2>Cadastro</h2>
+        <div class="Sides">
+          <div class="LeftSide">
+            <div class="TextField">
+              <input type="text" id="nome" name="nome" required />
+              <label for="nome">Nome</label>
+            </div>
+
+            <div class="TextField">
+              <input type="email" id="email" name="email" required />
+              <label for="email">E-mail</label>
+            </div>
+
+            <div class="TextField">
+              <input type="tel" id="telefone" name="telefone" required />
+              <label for="telefone">Telefone</label>
+            </div>
+          </div>
+
+          <div class="RightSide">
+            <div class="TextField">
+              <input type="password" id="senha" name="senha" required />
+              <label for="senha">Senha</label>
+            </div>
+
+            <div class="TextField">
+              <input
+                type="password"
+                id="confirmarSenha"
+                name="confirmarSenha"
+                required
+              />
+              <label id="confSenha" for="confirmarSenha">confirmarSenha</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="BtnDiv">
+          <button type="submit">Cadastrar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footerContainer">
+        <div class="description">
+          <h2>Crop Talk</h2>
+          <p>
+            Empresa Brasileira com soluções tecnológicas em busca de trazer o
+            baixo custo e melhor rendimento a sua fazenda
+          </p>
+        </div>
+      </div>
+      <div class="footerContainer">
+        <ul class="Social">
+          <li>Instagram</li>
+          <li>Facebook</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

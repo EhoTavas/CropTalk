@@ -1,0 +1,167 @@
+/* Intro Section */
+#introDesc * {
+  background: #a9b388;
+}
+
+.intro img {
+  height: 370px;
+  width: 657.77;
+  border-radius: 7px;
+}
+
+#introDesc {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+#introDesc * {
+  padding: 5px;
+}
+
+#introDesc p {
+  font-size: 35px;
+  text-align: center;
+}
+
+#introLinkDiv {
+  display: flex;
+  background: #a9b388;
+  align-items: center;
+  justify-content: center;
+}
+
+#introLink {
+  text-align: center;
+  margin: 15px;
+  width: 90px;
+  padding: 10px 20px;
+  transition: all 0.3s ease 0s;
+  background: #5f6f52;
+}
+
+#introLink:hover {
+  padding: 12px 27px;
+  text-decoration: none;
+}
+
+/* Cards Section */
+.cardsSection {
+  background: #fefae0;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 243px;
+  height: 400px;
+  background: #b99470;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
+  transition: ease 0.7s;
+}
+
+.cards:hover {
+  width: 282px;
+  height: 440px;
+}
+
+.cards img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
+  transition: ease 0.5s;
+}
+
+.cards:hover img {
+  width: 220px;
+  height: 220px;
+}
+
+.cards h3 {
+  font-size: 30px;
+  color: #fefae0;
+}
+
+/* About-us */
+.About {
+  background: #fefae0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid #b99470;
+  border-bottom: 1px solid #b99470;
+}
+
+.About h2 {
+  font-size: 35px;
+  color: #5f6f52;
+  margin-bottom: 100px;
+}
+
+.About p {
+  font-size: 25px;
+  margin: 0px;
+}
+
+.About li {
+  font-size: 17px;
+  margin: 25px;
+}
+
+/* Seeding the Future */
+.Seeding {
+  background-image: url(../../public/images/trator.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+}
+
+.ImgOverlay {
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ImgOverlay h2 {
+  font-size: 40px;
+  color: white;
+}
+
+.ImgOverlay div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 350px;
+  height: 150px;
+}
+
+.ImgOverlay div a {
+  margin: 10px;
+}
+
+#LinkSugestao {
+  border-radius: 3px;
+  background: #2a8b73;
+  transition: 0.4s ease;
+}
+
+#LinkComunidade {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  transition: 0.4s ease;
+}
+
+#LinkSugestao:hover,
+#LinkComunidade:hover {
+  padding: 15px 17px;
+}

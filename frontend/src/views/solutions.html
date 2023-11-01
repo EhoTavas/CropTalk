@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/styles.css">
+    <link rel="stylesheet" href="../../public/solutions.css">
+    <title>PI IV</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <div id="logoContainer">
+            <img src="../../public/images/logo.jpg">
+            <a class="logo" href="index.html">Crop Talk</a>
+        </div>
+        
+        <nav>
+            <ul class="navLinks">
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="register.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section id="welcomeSection">
+        <div>
+            <h3>Faça seu login para usar nossas funcionalidades!</h3>
+        </div>
+    </section>
+
+    <!-- Section Solution -->
+    <section class="Solutions">
+        <h2 id="title">Envie sua solução:</h2>
+        <form method="post">
+            <h2>Para que é a solução?</h2>
+
+            <div class="RadioDiv">
+                <span>
+                    <input type="radio" name="pragas">
+                    <label for="pragas">pragas</label>
+                </span>
+                
+                <span>
+                    <input type="radio" name="solo">
+                    <label for="solo">solo</label>
+                </span>
+                
+                <span>
+                    <input type="radio" name="irrigacao">
+                    <label for="irrigacao">irrigacao</label>
+                </span>
+            </div>
+
+            <div class="TextField" id="text1">
+                <h2>Qual a sua solução?</h2>
+                <input type="text">
+            </div>
+            <div class="TextField" id="text2">
+                <h2>Como deve ser aplicado?</h2>
+                <input type="text">
+            </div>
+
+            <div id="buttonDiv">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footerContainer">
+            <div class="description">
+                <h2>Crop Talk</h2>
+                <p>Empresa Brasileira com soluções tecnológicas em busca de trazer o baixo custo e melhor rendimento a sua fazenda</p>
+            </div>
+        </div>
+        <div class="footerContainer">
+            <ul class="Social">
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

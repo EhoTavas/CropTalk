@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../public/styles.css" />
-    <link rel="stylesheet" href="../../public/register.css" />
+    <link rel="stylesheet" href="../../public/register.css" /> 
+    <script src="validationsRecord.js"></script>
+
     <title>Crop Talk</title>
   </head>
   <body>
@@ -32,7 +34,7 @@
 
     <!-- Cards -->
     <section id="sectionRegister">
-      <form class="Register" method="post">
+      <form class="Register" method="post" onsubmit="return validateForm()">
         <h2>Cadastro</h2>
         <div class="Sides">
           <div class="LeftSide">
@@ -73,6 +75,7 @@
         <div class="BtnDiv">
           <button type="submit">Cadastrar</button>
         </div>
+        <div id="errorMessages" class="error-message"></div>
       </form>
     </section>
 

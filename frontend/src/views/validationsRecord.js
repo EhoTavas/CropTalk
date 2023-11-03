@@ -10,7 +10,7 @@ function validateForm() {
     
 
     //validação do nome
-    if (!/^[a-zA-Z\s]+$/.test(name)) {
+    if (!/^[a-zA-ZÀ-ú\s]+$/.test(name)) {
         errorMessages.textContent = "Nome inválido.";
         return false;
       }

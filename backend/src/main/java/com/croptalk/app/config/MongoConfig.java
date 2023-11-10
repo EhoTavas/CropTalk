@@ -10,10 +10,10 @@ import org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory;
 
 @Configuration
 public class MongoConfig {
-  @Value("${spring.data.mongodb.uri}")
+  @Value("${mongodb+srv://matheusfstaveira:qwerty123456@croptalkbd.zwhq7p8.mongodb.net/?retryWrites=true&w=majority}")
   private String mongoUri;
 
-  @Value("${spring.data.mongodb.database}")
+  @Value("${CropTalkBd}")
   private String databaseName;
 
   @Bean

@@ -13,13 +13,16 @@ public class IaQuestion {
     @Id
     private String idQuestion;
     @Id
-    private String idUser;  
+    private String idUser; 
+    @Id
+    private String idSponsoredProduts; 
     private String question;
     private String awnser;
     private Byte typeSolution;
 
-    public IaQuestion(String idUser, String question, String awnser, Byte typeSolution){
+    public IaQuestion(String idUser, String idSponsoredProduts, String question, String awnser, Byte typeSolution){
         this.idUser = idUser;
+        this.idSponsoredProduts = idSponsoredProduts;
         this.question = question;
         this.awnser = awnser;
         this.typeSolution = typeSolution;
@@ -28,6 +31,10 @@ public class IaQuestion {
     //getters
     public String getIdUser(){
         return this.idUser;
+    }
+
+    public String getIdSponsoredPoduts(){
+        return this.idSponsoredProduts;
     }
 
     public String getQuestion(){
@@ -45,6 +52,10 @@ public class IaQuestion {
     //setters
     public void setIdUser(String idUser){
         this.idUser = idUser;
+    }
+
+    public void setIdSponsosedProduts(String idSponsoredProduts){
+        this.idSponsoredProduts = idSponsoredProduts;
     }
 
     public void setQuestion(String question){

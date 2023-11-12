@@ -18,7 +18,7 @@ import com.croptalk.app.services.ComunityPostService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping(path = "api/v1/comunityPosts")
+@RequestMapping(path = "api/v2/comunityPosts")
 @AllArgsConstructor
 public class ComunityPostController {
   private final ComunityPostService comunityPostService;

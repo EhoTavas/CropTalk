@@ -12,7 +12,6 @@ import lombok.Data;
 public class ComunityPost {
   @Id
   private String id;
-  @Id
   private String idUser;
   private String post;
   private byte typeSolution;

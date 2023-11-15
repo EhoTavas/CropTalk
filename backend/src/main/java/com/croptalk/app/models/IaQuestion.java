@@ -12,9 +12,7 @@ import lombok.Data;
 public class IaQuestion {
     @Id
     private String idQuestion;
-    @Id
     private String idUser; 
-    @Id
     private String idSponsoredProduts; 
     private String question;
     private String awnser;

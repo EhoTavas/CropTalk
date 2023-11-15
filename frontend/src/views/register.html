@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../../public/styles.css" />
     <link rel="stylesheet" href="../../public/register.css" /> 
     <script src="validationsRecord.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="registerUser.js"></script>
 
     <title>Crop Talk</title>
   </head>
@@ -73,9 +75,10 @@
         </div>
 
         <div class="BtnDiv">
-          <button type="submit">Cadastrar</button>
+          <button type="submit" onclick="registerUser()">Cadastrar</button>
         </div>
         <div id="errorMessages" class="error-message"></div>
+        <div id="messagesResonse"></div>
       </form>
     </section>
 

@@ -28,56 +28,58 @@ public class User {
     this.isActive = isActive;
   }
 
-  //getters
-  public String getName(){
+  public User() {
+  }
+
+  // getters
+  public String getName() {
     return this.name;
-}
+  }
 
-public String getEmail(){
+  public String getEmail() {
     return this.email;
-}
+  }
 
-public String getPhone(){
+  public String getPhone() {
     return this.phone;
-}
+  }
 
-public String getPassword(){
+  public String getPassword() {
     return this.password;
-}
+  }
 
-public String getConfirmPassword(){
+  public String getConfirmPassword() {
     return this.confirmPassword;
-}
+  }
 
-public boolean getActive(){
+  public boolean getActive() {
     return this.isActive;
-}
+  }
 
-//setters
-public void setName(String name){
-  //nao precisa fazer validaçao, dados foram validados no frontend
-  this.name = name;
-}
+  // setters
+  public void setName(String name) {
+    // nao precisa fazer validaçao, dados foram validados no frontend
+    this.name = name;
+  }
 
-public void setEmail(String email){
-  this.email = email;
-}
-public void setPhone(String phone){
-  this.phone = phone;
-}
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-public void setPassword(String password){
-  this.password = password;
-}
+  public void setPhone(String phone) {
+    this.phone = phone;
+  }
 
-public void setConfirmPassword(String confirmPassword){
-  this.confirmPassword = confirmPassword;
-}
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-public void setActive(boolean isActive){
-  this.isActive = isActive;
-}
+  public void setConfirmPassword(String confirmPassword) {
+    this.confirmPassword = confirmPassword;
+  }
 
-  
+  public void setActive(boolean isActive) {
+    this.isActive = isActive;
+  }
 
 }

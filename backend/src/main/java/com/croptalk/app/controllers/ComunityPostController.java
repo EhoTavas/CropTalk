@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,8 +19,9 @@ import com.croptalk.app.services.ComunityPostService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping(path = "api/v2/comunityPosts")
+@RequestMapping(path = "api/v1/comunityPosts")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://127.0.0.1:5500") //endereço do frontend
 public class ComunityPostController {
   private final ComunityPostService comunityPostService;
 
@@ -49,7 +51,6 @@ public class ComunityPostController {
       return ResponseEntity.badRequest().build(); // 400 Bad Request
     }
 
-    // Proceed with user creation logic
     ComunityPost createdPost = comunityPostService.createPost(newPost);
     return new ResponseEntity<>(createdPost, HttpStatus.CREATED);
   }

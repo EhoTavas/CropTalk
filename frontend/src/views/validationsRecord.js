@@ -68,7 +68,6 @@ function validateForm(event) {
     const config = {
       headers: {
         'Content-Type': 'application/json',
-        // Adicione outros headers, se necessário
       },
     };
     axios.post('http://localhost:8080/api/v1/users', userData, config)

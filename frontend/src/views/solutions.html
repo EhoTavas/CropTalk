@@ -34,7 +34,7 @@
         <!-- Section Solution -->
         <section class="Solutions">
             <h2 id="title">Envie sua solução:</h2>
-            <form method="post">
+            <form method="post" onsubmit="validateFormSolutions(event)">
                 <h2>Para que é a solução?</h2>
 
                 <div class="RadioDiv">
@@ -56,16 +56,17 @@
 
                 <div class="TextField" id="text1">
                     <h2>Qual a sua solução?</h2>
-                    <input type="text">
+                    <input type="text" id="solution">
                 </div>
                 <div class="TextField" id="text2">
                     <h2>Como deve ser aplicado?</h2>
-                    <input type="text">
+                    <input type="text" id="applicationSolution">
                 </div>
 
                 <div id="buttonDiv">
                     <button type="submit">Enviar</button>
                 </div>
+                <div id="errorMessages" class="error-message"></div>
             </form>
         </section>
     </form>

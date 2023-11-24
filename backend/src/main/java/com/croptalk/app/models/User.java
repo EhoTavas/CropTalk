@@ -19,16 +19,8 @@ public class User {
   private String confirmPassword;
   private boolean isActive;
 
-  public User(String name, String email, String phone, String password, String confirmPassword, boolean isActive) {
-    this.name = name;
-    this.email = email;
-    this.phone = phone;
-    this.password = password;
-    this.confirmPassword = confirmPassword;
-    this.isActive = isActive;
-  }
-
   public User() {
+    this.isActive = true;
   }
 
   // getters
@@ -64,7 +56,7 @@ public class User {
     return true;
 }
   public void setName(String name) throws Exception {
-    if(name == null) throw new Exception("Nome ausente");
+    if(name == null || name.trim().isEmpty()) throw new Exception("Nome ausente");
     if(!isValidateName(name)) throw new Exception("Nome inválido!");
     this.name = name;
   }
@@ -117,7 +109,7 @@ public class User {
     this.confirmPassword = confirmPassword;
   }
 
-  public void isActive(boolean isActive) {
+  public void setActive(boolean isActive) {
     this.isActive = isActive;
   }
 

@@ -15,13 +15,8 @@ public class Solutions {
   private String typeSolutions;
   private String solution;
   private String applicationSolution;
-
-  public Solutions(String typeSolutions, String solution, String applicationSolution) {
-    this.typeSolutions = typeSolutions;
-    this.solution = solution;
-    this.applicationSolution = applicationSolution;
-  }
-
+  
+  //construtor
   public Solutions() {
   }
 
@@ -39,15 +34,18 @@ public class Solutions {
   }
 
   // setters
-  public void setTypeSolutions(String typeSolutions) {
+  public void setTypeSolutions(String typeSolutions) throws Exception{
+    if(typeSolutions == null || typeSolutions.trim().isEmpty())throw new Exception("Insira o tipo da solução!");
     this.typeSolutions = typeSolutions;
   }
 
-  public void setSolution(String solution) {
+  public void setSolution(String solution) throws Exception {
+    if(solution == null || solution.trim().isEmpty()) throw new Exception("Insira a solução!");
     this.solution = solution;
   }
 
-  public void setApplicationSolution(String applicationSolution) {
+  public void setApplicationSolution(String applicationSolution) throws Exception {
+    if(applicationSolution == null || applicationSolution.trim().isEmpty()) throw new Exception("Insira o modo de aplicação!");
     this.applicationSolution = applicationSolution;
   }
 

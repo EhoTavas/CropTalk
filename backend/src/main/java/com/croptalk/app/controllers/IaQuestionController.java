@@ -50,7 +50,7 @@ public class IaQuestionController {
 
   //post para criação da pergunta
   @PostMapping
-  public ResponseEntity<IaQuestion> createQustion(@RequestBody IaQuestion newQuestion) {
+  public ResponseEntity<IaQuestion> createQuestion(@RequestBody IaQuestion newQuestion) {
     // Check if the request body is null
     if (newQuestion == null) {
       return ResponseEntity.badRequest().build(); // 400 Bad Request

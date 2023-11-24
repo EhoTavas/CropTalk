@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/styles.css">
     <link rel="stylesheet" href="../../public/solutions.css">
-    <title>PI IV</title>
+    <script src="validationsSolutions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Soluções</title>
 </head>
 <body>
     <!-- Navigation bar -->
@@ -22,8 +24,6 @@
             </ul>
         </nav>
     </header>
-
-    <form method="post">
         <!-- Welcome Section -->
         <section id="welcomeSection">
             <div>
@@ -34,33 +34,33 @@
         <!-- Section Solution -->
         <section class="Solutions">
             <h2 id="title">Envie sua solução:</h2>
-            <form method="post" onsubmit="validateFormSolutions(event)">
+            <form class="solutions" onsubmit="validateFormSolutions(event)">
                 <h2>Para que é a solução?</h2>
 
                 <div class="RadioDiv">
                     <span>
-                        <input type="radio" name="pragas">
-                        <label for="pragas">pragas</label>
+                        <input type="radio" id="pragas" value="pragas" name="solutionType">
+                        <label for="pragas">Pragas</label>
                     </span>
                     
                     <span>
-                        <input type="radio" name="solo">
-                        <label for="solo">solo</label>
+                        <input type="radio" id="solo" value="solo" name="solutionType">
+                        <label for="solo">Solo</label>
                     </span>
                     
                     <span>
-                        <input type="radio" name="irrigacao">
-                        <label for="irrigacao">irrigacao</label>
+                        <input type="radio" id="irrigacao" value="irrigacao" name="solutionType">
+                        <label for="irrigacao">Irrigação</label>
                     </span>
                 </div>
 
                 <div class="TextField" id="text1">
                     <h2>Qual a sua solução?</h2>
-                    <input type="text" id="solution">
+                    <input type="text" id="solution" required>
                 </div>
                 <div class="TextField" id="text2">
                     <h2>Como deve ser aplicado?</h2>
-                    <input type="text" id="applicationSolution">
+                    <input type="text" id="applicationSolution" required>
                 </div>
 
                 <div id="buttonDiv">
@@ -69,7 +69,6 @@
                 <div id="errorMessages" class="error-message"></div>
             </form>
         </section>
-    </form>
 
     <!-- Footer -->
     <footer>

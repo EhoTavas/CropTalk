@@ -45,7 +45,7 @@ public class SolutionsController {
   }
 
   @PostMapping
-  public ResponseEntity<Solutions> createUser(@RequestBody Solutions newSolution) {
+  public ResponseEntity<Solutions> createSolution(@RequestBody Solutions newSolution) {
     if (newSolution == null) {
       return ResponseEntity.badRequest().build(); // 400 Bad Request
     }

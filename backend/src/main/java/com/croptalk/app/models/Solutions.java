@@ -12,24 +12,21 @@ import lombok.Data;
 public class Solutions {
   @Id
   private String id;
-  private String userId;
-  private Byte typeSolutions;
+  private String typeSolutions;
   private String solution;
   private String applicationSolution;
 
-  public Solutions(String userId, Byte typeSolutions, String solution, String applicationSolution) {
-    this.userId = userId;
+  public Solutions(String typeSolutions, String solution, String applicationSolution) {
     this.typeSolutions = typeSolutions;
     this.solution = solution;
     this.applicationSolution = applicationSolution;
   }
 
-  // getters
-  public String getuserId() {
-    return this.userId;
+  public Solutions() {
   }
 
-  public Byte getTypeSolution() {
+  // getters
+  public String getTypeSolution() {
     return this.typeSolutions;
   }
 
@@ -42,12 +39,7 @@ public class Solutions {
   }
 
   // setters
-  public void setIdUser(String userId) {
-    // nao precisa fazer validaçao, dados foram validados no frontend
-    this.userId = userId;
-  }
-
-  public void setTypeSolutions(Byte typeSolutions) {
+  public void setTypeSolutions(String typeSolutions) {
     this.typeSolutions = typeSolutions;
   }
 

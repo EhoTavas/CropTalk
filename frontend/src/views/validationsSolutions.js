@@ -1,35 +1,49 @@
 function validateFormSolutions(event) {
-    event.preventDefault();
-      //const typeSolutions = document.getElementById("nome").value;
-      const solution = document.getElementById("solution").value;
-      const applicationSolution = document.getElementById("applicationSolution").value;
-      const errorMessages = document.getElementById("errorMessages");
-  
-      // construcao do obj com os dados
-      const solutionData = {
-        //typeSolutions: typeSolutions,
-        solution: solution,
-        applicationSolution: applicationSolution
-    };
-      errorMessages.textContent = ""; // Limpa mensagens de erro anteriores.
-      
-  
-      //validação do solução
-      if (solution == null) {
-          errorMessages.textContent = "Escreva a sua solução!";
-          return false;
-        }
-        
-  
-      //validação application
-      if(applicationSolution == null){
-          errorMessages.textContent = "Escreva como será aplicada a sua solução!";
-          return false;
+  event.preventDefault();
+
+  const solution = document.getElementById("solution").value.trim(); //retira os espaços em branco
+  const applicationSolution = document.getElementById("applicationSolution").value.trim();
+  const errorMessages = document.getElementById("errorMessages");
+
+  // Adicione a validação para os campos de rádio
+  const solutionTypeRadios = document.getElementsByName("solutionType");
+  let selectedSolutionType = null; //aramazena a opcao de radio
+
+  //percorre todas as opcoes e para quando achar a selecionada
+  for (const radio of solutionTypeRadios) {
+      if (radio.checked) {
+          selectedSolutionType = radio.value;
+          break;
       }
-    
-      createSolution(solutionData);
-      return true;
-    }
+  }
+
+  errorMessages.textContent = "";
+
+  // Verifica se algum campo está em branco
+  if (!solution) {
+      errorMessages.textContent = "Escreva a sua solução!";
+      return false;
+  }
+  if (!applicationSolution) {
+    errorMessages.textContent = "Escreva como será a aplicação!";
+    return false;
+}
+if (!selectedSolutionType) {
+  errorMessages.textContent = "Escolha pelo menos uma das opções!";
+  return false;
+}
+
+  // Adiciona os atributos ao objeto solutionData
+  const solutionData = {
+      solution: solution,
+      applicationSolution: applicationSolution,
+      typeSolutions: selectedSolutionType
+  };
+
+  createSolution(solutionData);
+  return true;
+}
+
   
     async function createSolution(solutionData) {
       // Envia a requisição POST para o backend

@@ -22,7 +22,7 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping(path = "api/v1/users")
 @AllArgsConstructor
-@CrossOrigin(origins = "http://localhost:5500") //endereço do frontend
+@CrossOrigin(origins = "http://127.0.0.1:5500") //endereço do frontend
 public class UserController {
   private final UserService userService;
 

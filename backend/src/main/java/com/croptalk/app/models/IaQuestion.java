@@ -12,29 +12,15 @@ import lombok.Data;
 public class IaQuestion {
     @Id
     private String idQuestion;
-    private String idUser; 
-    private String idSponsoredProduts; 
     private String question;
     private String awnser;
-    private Byte typeSolution;
+    private String typeBusiness;
 
-    public IaQuestion(String idUser, String idSponsoredProduts, String question, String awnser, Byte typeSolution){
-        this.idUser = idUser;
-        this.idSponsoredProduts = idSponsoredProduts;
-        this.question = question;
-        this.awnser = awnser;
-        this.typeSolution = typeSolution;
+    public IaQuestion(){
+
     }
 
     //getters
-    public String getIdUser(){
-        return this.idUser;
-    }
-
-    public String getIdSponsoredPoduts(){
-        return this.idSponsoredProduts;
-    }
-
     public String getQuestion(){
         return this.question;
     }
@@ -43,20 +29,14 @@ public class IaQuestion {
         return this.awnser;
     }
     
-    public Byte getTypeSolution(){
-        return this.typeSolution;
+    public String getTypeBusiness(){
+        return this.typeBusiness;
     }
 
     //setters
-    public void setIdUser(String idUser){
-        this.idUser = idUser;
-    }
 
-    public void setIdSponsosedProduts(String idSponsoredProduts){
-        this.idSponsoredProduts = idSponsoredProduts;
-    }
-
-    public void setQuestion(String question){
+    public void setQuestion(String question) throws Exception{
+        if(question == null || question.trim().isEmpty()) throw new Exception("Insira a sua pergunta!");
         this.question = question;
     }
 
@@ -64,7 +44,8 @@ public class IaQuestion {
         this.awnser = awnser;
     }
 
-    public void setTypeSolution(Byte typeSoluction){
-        this.typeSolution = typeSoluction;
+    public void setTypeBusiness(String typeBusiness) throws Exception{
+        if(typeBusiness == null || typeBusiness.trim().isEmpty()) throw new Exception("Selecione o tipo do seu negócio!");
+        this.typeBusiness = typeBusiness;
     }
 }

@@ -1,10 +1,21 @@
-function validateForm() {
+function validateForm(event) {
+  event.preventDefault();
     const name = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("telefone").value;
     const senha = document.getElementById("senha").value;
     const confirmarSenha = document.getElementById("confirmarSenha").value;
     const errorMessages = document.getElementById("errorMessages");
+
+    // construcao do obj com os dados
+    const userData = {
+      name: name,
+      email: email,
+      phone: phone,
+      password: senha,
+      confirmPassword: confirmarSenha
+  };
+   
 
     errorMessages.textContent = ""; // Limpa mensagens de erro anteriores.
     
@@ -39,6 +50,7 @@ function validateForm() {
         return false;
     }
 
+    registerUser(userData);
     return true;
   }
 
@@ -50,4 +62,23 @@ function validateForm() {
     }
     return true;
   }
+
+  async function registerUser(userData) {
+    // Envia a requisição POST para o backend
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    axios.post('http://localhost:8080/api/v1/users', userData, config)
+        .then(response => {
+            console.log(response.data);
+            errorMessages.textContent = "Cadastro efetuado com sucesso!";
+        })
+        .catch(error => {
+            console.error(error);
+            errorMessages.textContent = "Erro ao cadastrar! Tente novamente";
+        });
+        
+}
   

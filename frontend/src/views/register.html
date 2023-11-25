@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../../public/register.css" /> 
     <script src="validationsRecord.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="registerUser.js"></script>
 
     <title>Crop Talk</title>
   </head>
@@ -36,29 +35,29 @@
 
     <!-- Cards -->
     <section id="sectionRegister">
-      <form class="Register" method="post" onsubmit="return validateForm()">
+      <form class="Register" onsubmit="validateForm(event)">
         <h2>Cadastro</h2>
         <div class="Sides">
           <div class="LeftSide">
             <div class="TextField">
-              <input type="text" id="nome" name="nome" required />
+              <input type="text" id="nome" name="nome" autocomplete="name" required />
               <label for="nome">Nome</label>
             </div>
 
             <div class="TextField">
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" autocomplete="email" />
               <label for="email">E-mail</label>
             </div>
 
             <div class="TextField">
-              <input type="tel" id="telefone" name="telefone" required />
+              <input type="tel" id="telefone" name="telefone" autocomplete="tel" />
               <label for="telefone">Telefone</label>
             </div>
           </div>
 
           <div class="RightSide">
             <div class="TextField">
-              <input type="password" id="senha" name="senha" required />
+              <input type="password" id="senha" name="senha" autocomplete="new-password" required />
               <label for="senha">Senha</label>
             </div>
 
@@ -67,6 +66,7 @@
                 type="password"
                 id="confirmarSenha"
                 name="confirmarSenha"
+                autocomplete="new-password"
                 required
               />
               <label id="confSenha" for="confirmarSenha">confirmarSenha</label>
@@ -75,10 +75,9 @@
         </div>
 
         <div class="BtnDiv">
-          <button type="submit" onclick="registerUser()">Cadastrar</button>
+          <button type="submit">Cadastrar</button>
         </div>
         <div id="errorMessages" class="error-message"></div>
-        <div id="messagesResonse"></div>
       </form>
     </section>
 

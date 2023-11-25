@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/styles.css">
     <link rel="stylesheet" href="../../public/solutions.css">
-    <title>PI IV</title>
+    <script src="validationsSolutions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Soluções</title>
 </head>
 <body>
     <!-- Navigation bar -->
@@ -22,8 +24,6 @@
             </ul>
         </nav>
     </header>
-
-    <form method="post">
         <!-- Welcome Section -->
         <section id="welcomeSection">
             <div>
@@ -34,41 +34,58 @@
         <!-- Section Solution -->
         <section class="Solutions">
             <h2 id="title">Envie sua solução:</h2>
-            <form method="post">
+            <form class="solutions" onsubmit="validateFormSolutions(event)">
                 <h2>Para que é a solução?</h2>
 
                 <div class="RadioDiv">
                     <span>
+<<<<<<< HEAD
                         <input class="radioInput" id="praga" type="radio" name="tipoSolução" value="Praga" required>
                         <label for="praga">Praga</label>
                     </span>
                     
                     <span>
                         <input class="radioInput" id="solo" type="radio" name="tipoSolução" value="Solo" required>
+=======
+                        <input type="radio" id="pragas" value="pragas" name="solutionType">
+                        <label for="pragas">Pragas</label>
+                    </span>
+                    
+                    <span>
+                        <input type="radio" id="solo" value="solo" name="solutionType">
+>>>>>>> 34a260468a71dcede953dc472784f03d7f26cbd4
                         <label for="solo">Solo</label>
                     </span>
                     
                     <span>
+<<<<<<< HEAD
                         <input class="radioInput" id="irrigacao" type="radio" name="tipoSolução" value="Irrigacao" required>
+=======
+                        <input type="radio" id="irrigacao" value="irrigacao" name="solutionType">
+>>>>>>> 34a260468a71dcede953dc472784f03d7f26cbd4
                         <label for="irrigacao">Irrigação</label>
                     </span>
                 </div>
 
                 <div class="TextField" id="text1">
                     <h2>Qual a sua solução?</h2>
-                    <input type="text">
+                    <input type="text" id="solution" required>
                 </div>
                 <div class="TextField" id="text2">
                     <h2>Como deve ser aplicado?</h2>
+<<<<<<< HEAD
                     <textarea type="text" placeholder="digite"></textarea>
+=======
+                    <input type="text" id="applicationSolution" required>
+>>>>>>> 34a260468a71dcede953dc472784f03d7f26cbd4
                 </div>
 
                 <div id="buttonDiv">
                     <button type="submit">Enviar</button>
                 </div>
+                <div id="errorMessages" class="error-message"></div>
             </form>
         </section>
-    </form>
 
     <!-- Footer -->
     <footer>

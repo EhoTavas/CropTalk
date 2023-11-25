@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../public/styles.css" />
     <link rel="stylesheet" href="../../public/quiz.css" />
+    <script src="validationsIaQuestion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>PI IV</title>
   </head>
   <body>
@@ -24,7 +26,7 @@
       </nav>
     </header>
 
-    <form action="post">
+    <form action="post" onsubmit="validateFormQuestion(event)">
       <!-- Title Section 01 -->
       <section id="textSection">
         <div>
@@ -41,20 +43,20 @@
 
         <div class="Cards">
           <img src="../../public/images/Jardim.jpg" />
-          <input class="radioInput" id="type1" type="radio" name="tipoPropriedade" value="Jardim" required>
-          <label for="type1">Jardim</label>
+          <input class="radioInput" id="Jardim" type="radio" name="tipoPropriedade" value="Jardim" >
+          <label for="Jardim">Jardim</label>
         </div>
 
         <div class="Cards">
           <img src="../../public/images/Sitio.jpg" />
-          <input class="radioInput" id="type2" type="radio" name="tipoPropriedade" value="Sitio" required>
-          <label for="type2">Sítio</label>
+          <input class="radioInput" id="Sitio" type="radio" name="tipoPropriedade" value="Sitio" >
+          <label for="Sitio">Sítio</label>
         </div>
 
         <div class="Cards">
           <img src="../../public/images/Fazenda.jpg" />
-          <input class="radioInput" id="type3" type="radio" name="tipoPropriedade" value="Fazenda" required>
-          <label for="type3">Fazenda</label>
+          <input class="radioInput" id="Fazenda" type="radio" name="tipoPropriedade" value="Fazenda">
+          <label for="Fazenda">Fazenda</label>
         </div>
 
       </section>
@@ -65,14 +67,15 @@
           <h2>2 - Qual problema você está enfrentando?</h2>
           <p>Descreva em detalhes o problema enfrentado?</p>
 
-          <textarea type="text" placeholder="digite"></textarea>
+          <textarea type="text" placeholder="digite" id="question" required></textarea>
         </div>
       </section>
 
       <section id="buttonSection">
-        <button type="submit">Enviar</button>
+        <button type="submit">Enviar</button> 
       </section>
-      <div id="errorMessages" class="error-message"></div>
+      
+          <div id="errorMessages" class="error-message"></div> 
     </form>
 
     <!-- Footer -->

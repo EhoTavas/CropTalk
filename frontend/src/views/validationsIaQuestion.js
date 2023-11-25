@@ -1,48 +1,44 @@
 function validateFormQuestion(event) {
-    event.preventDefault();
-      const typeSolutions = document.getElementById
-      const question = document.getElementById("textSection").value;
-      const errorMessages = document.getElementById("errorMessages");
-      const credits = 10;
-      const type=0;
+  event.preventDefault();
 
-      errorMessages.textContent = ""; // Limpa mensagens de erro anteriores.
-      
-      //validação se pode fazer pergunta
-      if(credits<=0){
-        errorMessages = "Quantidade de créditos excedida! Adquira um novo plano."
-        return false;
-      }
+  const question = document.getElementById("question").value.trim(); //retira os espaços em branco
+  const errorMessages = document.getElementById("errorMessages");
 
-      if(typeSolutions == null){
-        errorMessages = "Escolha uma das três opções de negócios!";
-        return false;
-      }
+  // Adicione a validação para os campos de rádio
+  const businessTypeRadios = document.getElementsByName("tipoPropriedade");
+  let selectedBusinessType = null; //aramazena a opcao de radio
 
-      if(typeSolutions == "garden"){
-        type == 1;
+  //percorre todas as opcoes e para quando achar a selecionada
+  for (const radio of businessTypeRadios) {
+      if (radio.checked) {
+          selectedBusinessType = radio.value;
+          break;
       }
-      else if(typeSolutions == "smallFarm"){
-        type == 2;
-      } 
-      else if(typeSolutions == "bigFarm"){
-        type == 3;
-      }
+  }
 
-      if(question == null){
-        errorMessages = "Informe o problema na caixa de texto!";
-        return false;
-      }
-      
-      // construcao do obj com os dados
-      const questionData = {
-        type: type,
-        question: question
-    };
+  errorMessages.textContent = "";
 
-      createQuestion(questionData);
-      return true;
-}  
+  // Verifica se algum campo está em branco
+  if (!question) {
+      errorMessages.textContent = "Escreva o seu problema!";
+      return false;
+  }
+  
+if (!selectedBusinessType) {
+  errorMessages.textContent = "Escolha pelo menos uma das opções!";
+  return false;
+}
+
+  // Adiciona os atributos ao objeto solutionData
+  const questionData = {
+      question: question,
+      typeBusiness: selectedBusinessType
+  };
+
+  createQuestion(questionData);
+  return true;
+}
+
   
     async function createQuestion(questionData) {
       // Envia a requisição POST para o backend
@@ -54,11 +50,13 @@ function validateFormQuestion(event) {
       axios.post('http://localhost:8080/api/v1/iaQuestions', questionData, config)
           .then(response => {
               console.log(response.data);
-              errorMessages.textContent = "Pergunta enviada!";
+              errorMessages.textContent = "Solicitação enviada com sucesso!";
           })
           .catch(error => {
               console.error(error);
-              errorMessages.textContent = "Erro ao enviar a pergunta! Tente novamente";
+              errorMessages.textContent = "Erro ao enviar a solicitação! Tente novamente";
           });
           
   }
+    
+  

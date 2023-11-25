@@ -118,3 +118,10 @@ footer, footer * {
 .description h2 {
     font-size: 30px;
 }
+
+.error-message{
+    font-weight: 300;
+    font-size: 20px;
+    color: red;
+
+}

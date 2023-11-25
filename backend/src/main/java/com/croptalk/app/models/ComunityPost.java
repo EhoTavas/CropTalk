@@ -12,13 +12,10 @@ import lombok.Data;
 public class ComunityPost {
   @Id
   private String id;
-  private String idUser;
   private String post;
-  private byte typeSolution;
+  private String typeSolution;
 
-  public ComunityPost(String post, Byte typeSolution){
-    this.post = post;
-    this.typeSolution = typeSolution;
+  public ComunityPost(){
 
   }
 
@@ -27,7 +24,7 @@ public class ComunityPost {
     return this.post;
   }
 
-  public Byte getTypeSolution(){
+  public String getTypeSolution(){
     return this.typeSolution;
   }
 
@@ -36,7 +33,7 @@ public class ComunityPost {
     this.post = post;
   }
 
-  public void setTypeSolution(Byte typeSolution){
+  public void setTypeSolution(String typeSolution){
     this.typeSolution = typeSolution;
   }
 }

@@ -72,8 +72,8 @@ span label:hover {
 }
 
 .radioInput:checked ~ label{
-    background-color: #5f6f52;
-    border: 2px solid #5f6f52;
+    background-color: #a9b388;
+    border: 2px solid #a9b388;
 }
 
 .TextField {

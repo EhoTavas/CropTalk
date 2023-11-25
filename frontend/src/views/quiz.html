@@ -38,27 +38,34 @@
 
       <!-- Cards Section -->
       <section class="CardsSection">
-        <button class="Cards" href="#">
+
+        <div class="Cards">
           <img src="../../public/images/Jardim.jpg" />
-          <h3>Jardim</h3>
-        </button>
-        <button class="Cards" href="#">
+          <input class="radioInput" id="type1" type="radio" name="tipoPropriedade" value="Jardim" required>
+          <label for="type1">Jardim</label>
+        </div>
+
+        <div class="Cards">
           <img src="../../public/images/Sitio.jpg" />
-          <h3>Sítio</h3>
-        </button>
-        <button class="Cards" href="comunity.html">
+          <input class="radioInput" id="type2" type="radio" name="tipoPropriedade" value="Sitio" required>
+          <label for="type2">Sítio</label>
+        </div>
+
+        <div class="Cards">
           <img src="../../public/images/Fazenda.jpg" />
-          <h3>Fazenda</h3>
-        </button>
+          <input class="radioInput" id="type3" type="radio" name="tipoPropriedade" value="Fazenda" required>
+          <label for="type3">Fazenda</label>
+        </div>
+
       </section>
 
-      <!-- Title Section 02 -->
+      <!-- Text Section -->
       <section id="textSection">
         <div>
           <h2>2 - Qual problema você está enfrentando?</h2>
           <p>Descreva em detalhes o problema enfrentado?</p>
 
-          <input type="text" placeholder="digite" />
+          <textarea type="text" placeholder="digite"></textarea>
         </div>
       </section>
 

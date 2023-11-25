@@ -1,4 +1,8 @@
 /* Intro Section */
+.intro {
+  margin-top: -100px;
+}
+
 #introDesc * {
   background: #a9b388;
 }

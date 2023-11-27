@@ -397,6 +397,8 @@ a {
 
 }
 .Question1 input{    
+    display: flex;
+    position: relative;  
     margin: 2% 10%;
     width: 80%;
     height: 200%;
@@ -439,7 +441,7 @@ a {
     align-items: center;
     text-align: center;
     margin-left: 45%;
-    margin-top: 33% ;
+    margin-top: 35% ;
 }
 
 

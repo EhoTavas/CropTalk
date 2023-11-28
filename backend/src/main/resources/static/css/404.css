@@ -55,7 +55,7 @@ img {
 body {
   margin: 0px;
   padding: 0px;
-  background-image: url('../public/images/grao.png');
+  background-image: url('../static/images/grao.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

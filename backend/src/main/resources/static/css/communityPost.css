@@ -356,7 +356,7 @@ a {
     font-size: 1.5rem;
     top: 5%;
     left: 10%;
-    color: #0f0f0f;
+    color: #FCFCE4;
     
        
 }
@@ -368,6 +368,80 @@ a {
     top: 5%;
     left: 10%;
     color: #0f0f0f;
+}
+
+/* Marcadores */
+
+.Options input{ 
+    display: inline;
+    right: 100%;
+    margin-top: 7%;
+    margin-left: 10%;    
+    transition: ease 0.7s;
+}
+
+.Options label{
+    color: #FCFCE4;
+}
+
+
+/* Campos para responder */
+
+.Question input{
+    display: flex;
+    position: relative;    
+    margin: 1% 10%;
+    width: 80%;
+    height: 40%;
+    
+
+}
+.Question1 input{    
+    display: flex;
+    position: relative;  
+    margin: 2% 10%;
+    width: 80%;
+    height: 200%;
+
+}
+
+
+.Question h1{
+    display: flex;
+    position: relative;
+    font-size: 1.5rem;
+    top: 5%;
+    left: 10%;
+    color: #FCFCE4;
+    margin-top: 3%;
+
+}
+.Question1 h1{
+    display: flex;
+    position: relative;
+    font-size: 1.5rem;
+    top: 5%;
+    left: 10%;
+    color: #FCFCE4;
+    margin-top: 6%;
+
+}
+
+/* Botão de Enviar o Post */
+
+.BtnDiv button{
+    background: #BA9470;
+    color: #fefae0;
+    border: none;
+    border-radius: 15px;
+    width: 120px;
+    height: 50px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.219);
+    transition: 0.5s ease;
+    align-items: center;
+    text-align: center;
+    margin-left: 45%;
+    margin-top: 35% ;
 }
 
 

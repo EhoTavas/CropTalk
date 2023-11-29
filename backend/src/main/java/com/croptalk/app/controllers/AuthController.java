@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.croptalk.app.dao.LoginRequest;
 import com.croptalk.app.dao.SignupRequest;
 import com.croptalk.app.models.User;
+import com.croptalk.app.services.TokenService;
 import com.croptalk.app.services.UserService;
 
 import lombok.AllArgsConstructor;
@@ -26,6 +27,9 @@ public class AuthController {
   private final UserService userService;
 
   @Autowired
+  private TokenService tokenService;
+
+  @Autowired
   private AuthenticationManager authenticationManager;
 
   @PostMapping("/signin")
@@ -33,7 +37,10 @@ public class AuthController {
     try {
       var usernamePassword = new UsernamePasswordAuthenticationToken(data.getEmail(), data.getPassword());
       var auth = this.authenticationManager.authenticate(usernamePassword);
-      return ResponseEntity.ok().build();
+
+      var token = tokenService.generateToken((User) auth.getPrincipal());
+
+      return ResponseEntity.ok("Authentication complete, the token is: " + token);
     } catch (AuthenticationException e) {
       return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Authentication failed: " + e.getMessage());
     }

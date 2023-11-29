@@ -3,6 +3,7 @@ package com.croptalk.app.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import com.croptalk.app.models.User;
@@ -23,11 +24,15 @@ public class UserService {
     return userRepository.findById(userId);
   }
 
+  public Optional<UserDetails> getUserByEmail(String userEmail) {
+    return userRepository.findByEmail(userEmail);
+  }
+
   public User createUser(User user) {
     return userRepository.insert(user);
   }
 
-  public void deleteUser(String userId){
-     userRepository.deleteById(userId);
+  public void deleteUser(String userId) {
+    userRepository.deleteById(userId);
   }
 }

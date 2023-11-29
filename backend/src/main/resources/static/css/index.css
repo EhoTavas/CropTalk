@@ -1,4 +1,8 @@
 /* Intro Section */
+.intro {
+  margin-top: -100px;
+}
+
 #introDesc * {
   background: #a9b388;
 }
@@ -116,7 +120,7 @@
 
 /* Seeding the Future */
 .Seeding {
-  background-image: url(./images/trator.png);
+  background-image: url("../static/images/trator.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 30%;

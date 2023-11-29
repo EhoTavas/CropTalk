@@ -25,7 +25,7 @@ header {
     position: relative;
     display: flex;
     background: #a9b388;
-    height: 50px;
+    height: 25px;
     justify-content: space-between;
     align-items: center;
     padding: 25px 5%;
@@ -117,4 +117,11 @@ footer, footer * {
 
 .description h2 {
     font-size: 30px;
+}
+
+.error-message{
+    font-weight: 300;
+    font-size: 20px;
+    color: red;
+
 }

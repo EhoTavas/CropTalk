@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* Adicionei essa regra para importar a fonte Arimo do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+
+
+
+/* Intro Comunidade*/
+#welcomeSection {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: #FCFCE4;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: larger;
+    margin: 0px 0px;
+}
+
+#sectionTop {
+    display: flex;
+    position: relative;
+    top: 200;
+    height: 50px;
+    background: #DFE9C1;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 40px 0px;
+    
+}
+
+#sectionContent {
+    display: flex;
+    position: relative;
+    top: 200;
+    height: 70px;
+    background: #A9B489;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 5% 6%;
+    border-radius: 15px;
+    z-index: 1;
+    
+}
+
+#sectionBackgroundContent {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-top: 50;
+    height: 900px;
+    background: #DFE9C1;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5% 6%;
+    border-radius: 15px;
+    z-index: 0;    
+}
+
+#infoTopics {
+    flex-direction: row;
+    left: 50px;
+    align-items: flex-start;
+    
+
+
+    transition: ease 0.5s;
+}
+
+
+
+#like img{
+    display: flex;
+    position: relative;
+    float: right;
+    top:-280%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    
+}
+
+
+#comments img{
+    display: flex;
+    position: relative;
+    float: right;
+    top:-380%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    background: none;
+}
+
+#n1 h3{
+    display: flex;
+    position: relative;
+    float: right;
+    top:-280%;
+    left: 4%;
+    width: 30px;
+    height: 30px;
+    
+    
+    
+}
+#n2 h3{
+    display: flex;
+    position: relative;
+    float: right;
+    top:-365%;
+    left: 2.6%;
+    
+    height: 30px;
+    background: none;
+    
+}
+
+#plus img {
+    display: flex;
+    position: absolute;
+    float: left;
+    top:13%;
+    right: 94%;
+    width: 50px;
+    height: 50px;
+    
+    
+
+}
+
+#plus h3 {
+    font-size: 10%;
+    color: #0f0f0f;
+    
+}
+
+
+#newTopics h3{
+    display: flex;
+    position: absolute;
+    font-size: 1.3rem;
+
+    right: 80%;
+   
+    color:#21320D;
+    
+    
+    
+}
+
+#search {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 74%;
+    width: 25%;
+    height: 70%;
+    margin: 0% 0%;
+    background: #DFE9C1;
+   
+    
+    border-radius: 15px;
+    z-index: 2;
+}
+
+#search img {
+    display: flexbox;
+    position: absolute;
+    top: 20%;
+    left: 85%;    
+    width: 1.7rem;
+    height: 1.7rem;
+
+    
+    
+
+}
+
+#search h3 {
+    display: flex;
+    position: relative;
+    font-size: 1.1rem;
+    left: 5%;
+    color: #0f0f0f;
+    
+    
+}
+
+#search h3 {
+    display: flex;
+    position: relative;
+    font-size: 1.1rem;
+    left: 5%;
+    color: #0f0f0f;
+    
+    
+}
+
+
+#imputSearch {
+    display: flex;
+    position: absolute;
+    top: 13%;
+    left: 2%;
+    width: 85%;
+    height: 70%;
+    margin: 0% 0%;
+    background: #DFE9C1;
+   
+    
+    border-radius: 15px;
+    
+}
+
+#imputSearch h3 {
+    display: flex;
+    position: relative;
+    font-size: 1.1rem;
+    top: -35%;
+
+    left: 8%;
+    color: #0f0f0f;
+    
+    
+}
+
+
+
+/* Default */
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #fefae0;
+    font-family: 'Overlock', cursive;
+}
+
+section {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    top: 200px;
+    height: 500px;
+    background: #a9b388;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 100px 0px;
+}
+
+
+
+/* Header */
+header {
+    position: relative;
+    display: flex;
+    background: #a9b388;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%;
+    margin-bottom: -150px;
+}
+
+#logoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 190px;
+}
+
+#logoContainer img {
+    width: 50px;
+    height: 50px;
+}
+
+li, a {
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    background: #a9b388;
+    font-size: 30px;
+    color: black;
+}
+
+.navLinks {
+    list-style: none;
+    background-color: #DFE9C1;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0px 20px;
+ 
+}
+
+a {
+ 
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #fefae0;
+}
+
+.navLinks li a {
+
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
+.navLinks li a:hover {
+    padding: 15px 20px;
+    text-decoration: none;
+    background: #5f6f52;
+    color: #fefae0;
+}
+
+
+/* Cards Section */
+
+
+
+.Cards {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 90%;
+    height: 11%;
+    background: #fefae0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
+    transition: ease 0.7s;
+    border: none;
+}
+
+
+.Cards img {
+    width: 100px;
+    height: 100px;
+    flex-direction: row;
+    background-color: transparent;
+    
+    transition: ease 0.5s;
+}
+
+
+
+
+.Cards h3 {
+    font-size: 90%;
+    color: #0f0f0f;
+    margin: 5px 50px;
+}
+
+
+.Cards h4 {
+    font-family: Arimo, sans-serif;
+    font-size: 130%;
+    color: #0f0f0f;
+    margin: 10px 50px;
+}
+
+
+/* Footer */
+footer {
+    position: relative;
+    display: flex;
+    margin-top: 100px;
+    bottom: 0px;
+    height: 300px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 400px;
+}
+
+footer, footer * {
+    background-color: #b99470;
+    color: #fefae0;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.description h2 {
+    font-size: 30px;
+}
+

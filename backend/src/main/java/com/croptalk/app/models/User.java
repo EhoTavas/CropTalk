@@ -42,6 +42,26 @@ public class User implements UserDetails {
     return encoder.encode(password);
   }
 
+  private boolean nameIsValid(String name) {
+    if (name.matches(".*\\d.*"))
+      return false;
+    return true;
+  }
+
+  private boolean emailIsValid(String email) {
+    if (!email.matches("^[^@]+@[^@]+\\.(com|br)$"))
+      return false;
+    return true;
+  }
+
+  private boolean phoneIsValid(String phone) {
+    // Remover caracteres especiais usando expressão regular
+    phone = phone.replaceAll("[^0-9]", "");
+    if (phone.length() != 11)
+      return false;
+    return true;
+  }
+
   public String getName() {
     return this.name;
   }
@@ -58,16 +78,36 @@ public class User implements UserDetails {
     return this.isActive;
   }
 
-  public void setName(String name) {
+  public void setName(String name) throws Exception {
+    if (name == null || name.trim().isEmpty())
+      throw new Exception("Nome ausente");
+    if (!nameIsValid(name))
+      throw new Exception("Nome inválido!");
     this.name = name;
   }
 
-  public void setEmail(String email) {
+  public void setEmail(String email) throws Exception {
+    if (email == null)
+      throw new Exception("E-mail ausente");
+    if (!emailIsValid(email))
+      throw new Exception("E-mail inválido");
     this.email = email;
   }
 
-  public void setPhone(String phone) {
+  public void setPhone(String phone) throws Exception {
+    if (phone == null)
+      throw new Exception("Telefone ausente!");
+    if (!phoneIsValid(phone))
+      throw new Exception("Telefone inválido!");
     this.phone = phone;
+  }
+
+  public void setPassword(String password) throws Exception {
+    if (password == null)
+      throw new Exception("Senha ausente");
+    if (password.length() < 8)
+      throw new Exception("A senha deve ter pelo menos 8 dígitos");
+    this.password = hashPassword(password);
   }
 
   public void setActive(boolean isActive) {

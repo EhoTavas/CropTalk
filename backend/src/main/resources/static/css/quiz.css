@@ -1,10 +1,12 @@
+
+
 /* Intro login*/
 #textSection {
     display: flex;
     position: relative;
     width: 100%;
     height: 50px;
-    background: #FCFCE4;
+    background: #fefae0;
     align-items: center;
     justify-content: space-evenly;
     font-size: larger;
@@ -22,13 +24,16 @@
     color: rgba(0, 0, 0, 0.425);
 }
 
-#textSection input {
-    width: 350px;
-    height: 100px;
+#textSection textarea {
+    width: 600px;
+    height: 200px;
+    padding: 15px;
     background: #b99470a2;
     border-radius: 15px;
     border: none;
     outline: none;
+    color: #fefae0;
+    resize: none;
 }
 
 /* Cards Section */
@@ -46,15 +51,14 @@
     height: 400px;
     background: #b99470;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.199);
     transition: ease 0.7s;
     border: none;
 }
 
 .Cards:hover {
-    width: 282px;
+    width: 272px;
     height: 440px;
-    cursor: pointer;
 }
 
 .Cards img {
@@ -75,6 +79,32 @@
     color: #fefae0;
 }
 
+.radioInput {
+    display: none;
+}
+
+.Cards label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    color: #fefae0;
+    border: 2px solid #fefae0;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: 0.2s ease;
+}
+
+.Cards label:hover {
+    cursor: pointer;
+}
+
+.radioInput:checked ~ label{
+    background-color: #5f6f52;
+    border: 2px solid #5f6f52;
+}
+
 /* Button Section */
 #buttonSection {
     display: flex;
@@ -90,7 +120,7 @@
 }
 
 #buttonSection button {
-    background: #b99470;
+    background: #5f6f52;
     color: #fefae0;
     border: none;
     border-radius: 15px;

@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     height: 50px;
-    background: #FCFCE4;
+    background: #fefae0;
     align-items: center;
     justify-content: space-evenly;
     font-size: larger;
@@ -12,13 +12,29 @@
 }
 
 /* Cards Section */
+.Sides {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
-.Login {
+.LeftSide, .RightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardsSectionLogin {
+    background: #DFE9C1;
+}
+
+.Register {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    width: 300px;
+    width: 600px;
     height: 400px;
     background: #fefae0;
     border-radius: 20px;
@@ -26,7 +42,7 @@
     transition: ease 0.7s;
 }
 
-.Login h2 {
+.Register h2 {
     color: #5f6f52;
 }
 
@@ -36,11 +52,11 @@
     align-items: center;
     justify-content: center;
     width: 100px;
-    height: 50px;
+    height: 70px;
     margin: 0px;
 }
 
-.Login input {
+.Register input {
     width: 200px;
     padding: 5px;
     background: #fefae0;
@@ -51,7 +67,7 @@
     transition: 0.5s ease;
 }
 
-.Login label {
+.Register label {
     position: relative;
     left: -70px;
     top: -25px;
@@ -59,25 +75,29 @@
     transition: 0.5s ease;
 }
 
-.Login input:focus {
+#confSenha {
+    left: -39px;
+}
+
+.Register input:focus {
     border-bottom: 2px solid rgb(140, 186, 255);
 }
 
-.Login input:focus ~ label {
+.Register input:focus ~ label {
     transform: translateY(-25px);
     color: rgb(140, 186, 255);
 }
 
-.Login input:valid {
+.Register input:valid {
     border-bottom: 2px solid #a1d874;
 }
 
-.Login input:valid ~ label {
+.Register input:valid ~ label {
     color: #a1d874;
     transform: translateY(-25px);
 }
 
-.Login .BtnDiv {
+.Register .BtnDiv {
     display: flex;
     width: 100px;
     height: 15px;
@@ -86,7 +106,7 @@
     margin-bottom: 10px;
 }
 
-.Login button {
+.Register button {
     padding: 7px 70px;
     background: #5f6f52;
     color: #fefae0;
@@ -96,7 +116,7 @@
     transition: 0.5s ease;
 }
 
-.Login button:hover {
+.Register button:hover {
     padding: 10px 80px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.432);
     cursor: pointer;

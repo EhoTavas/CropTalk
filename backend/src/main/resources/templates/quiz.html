@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../public/styles.css" />
-    <link rel="stylesheet" href="../../public/quiz.css" />
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <link rel="stylesheet" href="../static/css/quiz.css" />
+    <script src="../static/js/validationsIaQuestion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>PI IV</title>
   </head>
   <body>
@@ -12,19 +14,19 @@
     <!-- Navigation bar -->
     <header>
       <div id="logoContainer">
-        <img src="../../public/images/logo.jpg" />
-        <a class="logo" href="index.html">Crop Talk</a>
+        <img src="../static/images/logo.jpg" />
+        <a class="logo" href="/">Crop Talk</a>
       </div>
 
       <nav>
         <ul class="navLinks">
-          <li><a href="login.html">Entrar</a></li>
-          <li><a href="register.html">Cadastre-se</a></li>
+          <li><a href="login">Entrar</a></li>
+          <li><a href="register">Cadastre-se</a></li>
         </ul>
       </nav>
     </header>
 
-    <form action="post">
+    <form action="post" onsubmit="validateFormQuestion(event)">
       <!-- Title Section 01 -->
       <section id="textSection">
         <div>
@@ -38,34 +40,42 @@
 
       <!-- Cards Section -->
       <section class="CardsSection">
-        <button class="Cards" href="#">
-          <img src="../../public/images/Jardim.jpg" />
-          <h3 id="garden">Jardim</h3>
-        </button>
-        <button class="Cards" href="#">
-          <img src="../../public/images/Sitio.jpg" />
-          <h3 id="bfarm">Sítio</h3>
-        </button>
-        <button class="Cards" href="comunity.html">
-          <img src="../../public/images/Fazenda.jpg" />
-          <h3 id="sfarm">Fazenda</h3>
-        </button>
+
+        <div class="Cards">
+          <img src="../static/images/Jardim.jpg" />
+          <input class="radioInput" id="Jardim" type="radio" name="tipoPropriedade" value="Jardim" >
+          <label for="Jardim">Jardim</label>
+        </div>
+
+        <div class="Cards">
+          <img src="../static/images/Sitio.jpg" />
+          <input class="radioInput" id="Sitio" type="radio" name="tipoPropriedade" value="Sitio" >
+          <label for="Sitio">Sítio</label>
+        </div>
+
+        <div class="Cards">
+          <img src="../static/images/Fazenda.jpg" />
+          <input class="radioInput" id="Fazenda" type="radio" name="tipoPropriedade" value="Fazenda">
+          <label for="Fazenda">Fazenda</label>
+        </div>
+
       </section>
 
-      <!-- Title Section 02 -->
+      <!-- Text Section -->
       <section id="textSection">
         <div>
           <h2>2 - Qual problema você está enfrentando?</h2>
           <p>Descreva em detalhes o problema enfrentado?</p>
 
-          <input type="text" placeholder="digite" />
+          <textarea type="text" placeholder="digite" id="question" required></textarea>
         </div>
       </section>
 
       <section id="buttonSection">
-        <button type="submit">Enviar</button>
+        <button type="submit">Enviar</button> 
       </section>
-      <div id="errorMessages" class="error-message"></div>
+      
+          <div id="errorMessages" class="error-message"></div> 
     </form>
 
     <!-- Footer -->

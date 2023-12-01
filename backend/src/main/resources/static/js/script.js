@@ -23,7 +23,7 @@ function updateRemainingQuestions() {
 
 updateRemainingQuestions(); // Atualiza o número restante inicialmente
 
-const OPENAI_API_KEY = "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 ";
+const OPENAI_API_KEY = "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";
 
 function SendQuestion() {
   if (remainingQuestions > 0) {

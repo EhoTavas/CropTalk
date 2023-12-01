@@ -46,6 +46,18 @@
     
 }
 
+
+
+@keyframes expand {
+    0% {
+      height: 100px;
+    }
+    100% {
+      height: auto;
+    }
+  }
+  
+
 #sectionBackgroundContent {
     display: flex;
     position: relative;
@@ -58,6 +70,7 @@
     margin: 5% 6%;
     border-radius: 15px;
     z-index: 0;  
+    animation: expand 2s;
      
 }
 
@@ -383,6 +396,7 @@ a {
     padding: 20px;
     z-index: 1000;
     overflow: auto;
+    word-wrap: break-word;
     animation: modalOpen 0.5s ease-out;
   }
   

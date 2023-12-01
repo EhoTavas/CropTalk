@@ -3,6 +3,7 @@ package com.croptalk.app.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.croptalk.app.models.Solutions;
@@ -14,6 +15,8 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @Service
 public class SolutionsService {
+
+  @Autowired
   private final SolutionsRepository solutionsRepository;
 
   public List<Solutions> getAllSolutions() {
@@ -30,5 +33,9 @@ public class SolutionsService {
 
   public void deleteSolution(String solutionId){
      solutionsRepository.deleteById(solutionId);
+  }
+
+  public List<Solutions> findBySolutionContaining(String solution) {
+    return solutionsRepository.findBySolutionContaining(solution);
   }
 }

@@ -1,8 +1,12 @@
+let loadedCards = 0;
+let data = [];
+
 async function getAllPosts() {
   axios.get('http://localhost:8080/api/v1/solutions')
       .then(response => {
           console.log(response.data);
-          displayData(response.data);
+          data = response.data;
+          displayData(data, loadedCards);
           errorMessages.textContent = "Sucesso!";
       })
       .catch(error => {
@@ -11,15 +15,12 @@ async function getAllPosts() {
       });
 }
 
-// Função para exibir os dados na página
-function displayData(data) {
+function displayData(data, start) {
   const solutionsContainer = document.getElementById('sectionBackgroundContent');
 
-  // Limpa o container de soluções
-  solutionsContainer.innerHTML = "";
-
   // Cria um novo card para cada item de dados
-  data.forEach(item => {
+  for (let i = start; i < start + 5 && i < data.length; i++) {
+    const item = data[i];
     const card = document.createElement("div");
     card.className = "Cards";
 
@@ -30,8 +31,17 @@ function displayData(data) {
 
     // Adiciona o card ao container de soluções
     solutionsContainer.appendChild(card);
-  });
+  }
+
+  loadedCards += 5;
 }
+
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        // O usuário chegou ao final da página, carregue mais cards
+        displayData(data, loadedCards);
+    }
+};
 
 // Chama a função getAllPosts quando a página é carregada
 window.onload = getAllPosts;

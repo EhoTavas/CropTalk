@@ -47,11 +47,11 @@
 }
 
 #sectionBackgroundContent {
+    overflow: auto;
     display: flex;
     position: relative;
     flex-direction: column;
-    margin-top: 50;
-    height: 900px;
+    margin-top: 50%;
     background: #DFE9C1;
     align-items: center;
     justify-content: space-evenly;
@@ -332,7 +332,8 @@ a {
     position: relative;
     flex-direction: column;
     width: 90%;
-    height: 11%;
+    height: 20%;
+    margin: 10px;
     background: #fefae0;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);

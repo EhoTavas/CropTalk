@@ -23,6 +23,7 @@ function displayData(data, start) {
     const item = data[i];
     const card = document.createElement("div");
     card.className = "Cards";
+    card.onclick = function() { openModal(item); };
 
     // 'solution' é o campo dos seus dados que você quer exibir
     const solution = document.createElement("h1");
@@ -35,6 +36,32 @@ function displayData(data, start) {
 
   loadedCards += 5;
 }
+
+function openModal(item) {
+  // Cria o elemento modal
+  const modal = document.createElement("div");
+  modal.className = "modal";
+
+ // Adiciona o título ao modal
+ const title = document.createElement("h2");
+ title.textContent = item.solution;  // Supondo que 'solution' seja o título
+ modal.appendChild(title);
+
+ // Adiciona a descrição ao modal
+ const description = document.createElement("p");
+ description.textContent = item.applicationSolution;  // Supondo que 'applicationSolution' seja a descrição
+ modal.appendChild(description);
+
+  // Adiciona um botão para fechar o modal
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "Fechar";
+  closeButton.onclick = function() { modal.style.display = "none"; };
+  modal.appendChild(closeButton);
+
+  // Adiciona o modal ao body
+  document.body.appendChild(modal);
+}
+
 
 window.onscroll = function(ev) {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {

@@ -47,7 +47,6 @@
 }
 
 #sectionBackgroundContent {
-    overflow: auto;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -57,7 +56,8 @@
     justify-content: space-evenly;
     margin: 5% 6%;
     border-radius: 15px;
-    z-index: 0;    
+    z-index: 0;  
+    overflow: scroll;  
 }
 
 #infoTopics {
@@ -329,17 +329,17 @@ a {
 
 .Cards {
     display: flex;
-    position: relative;
     flex-direction: column;
     width: 90%;
-    height: 20%;
-    margin: 10px;
+    margin: 1em auto;
     background: #fefae0;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
     transition: ease 0.7s;
     border: none;
+    padding: 1em;
 }
+
 
 
 .Cards img {
@@ -367,6 +367,24 @@ a {
     color: #0f0f0f;
     margin: 10px 50px;
 }
+
+
+/* Modal pop-up para o card */
+.modal {
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 10% auto;
+    background: #fff;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
 
 /* Footer */

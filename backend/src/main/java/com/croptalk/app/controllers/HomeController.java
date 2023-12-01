@@ -60,4 +60,9 @@ public class HomeController {
     public String page404() {
         return "404";
     }
+
+    @GetMapping("/chat")
+    public String GPT() {
+        return "chatgpt";
+    }
 }

@@ -4,13 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/css/styles.css" />
+    <link rel="stylesheet" href="../static/css/chatgpt.css">
+</head>
+
+<body>
+  <h1></h1>
+
+  <!-- Estrutura do Modal com Container de Chat -->
+  <div id="chatModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeChatModal">&times;</span>
+      <div id="chatContainer" class="content">
+        <div id="remainingQuestions" class="remaining-questions">5 perguntas/5</div>
+        <textarea id="result" rows="20" disabled placeholder=""></textarea>
+        <div class="input-container">
+          <textarea id="inputQuestion" placeholder="Digite sua pergunta aqui" style="width: 100%;"></textarea>
+          <button id="sendButton">Enviar</button> 
+        </div>
+      </div>
+    </div>
+  </div>
     <link rel="stylesheet" href="../static/css/quiz.css" />
+    <script src="../static/js/script.js"></script> 
     <script src="../static/js/validationsIaQuestion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>PI IV</title>
+    <title>PI IV</title>  
   </head>
   <body>
-    
     <!-- Navigation bar -->
     <header>
       <div id="logoContainer">
@@ -43,19 +63,19 @@
 
         <div class="Cards">
           <img src="../static/images/Jardim.jpg" />
-          <input class="radioInput" id="Jardim" type="radio" name="tipoPropriedade" value="Jardim" >
+          <input class="radioInput" id="Jardim" type="radio" name="tipoPropriedade" value="Tenho um Jardim e " >
           <label for="Jardim">Jardim</label>
         </div>
 
         <div class="Cards">
           <img src="../static/images/Sitio.jpg" />
-          <input class="radioInput" id="Sitio" type="radio" name="tipoPropriedade" value="Sitio" >
+          <input class="radioInput" id="Sitio" type="radio" name="tipoPropriedade" value="Tenho um Sitio e" >
           <label for="Sitio">Sítio</label>
         </div>
 
         <div class="Cards">
           <img src="../static/images/Fazenda.jpg" />
-          <input class="radioInput" id="Fazenda" type="radio" name="tipoPropriedade" value="Fazenda">
+          <input class="radioInput" id="Fazenda" type="radio" name="tipoPropriedade" value="Tenho uma Fazenda e">
           <label for="Fazenda">Fazenda</label>
         </div>
 
@@ -67,16 +87,66 @@
           <h2>2 - Qual problema você está enfrentando?</h2>
           <p>Descreva em detalhes o problema enfrentado?</p>
 
-          <textarea type="text" placeholder="digite" id="question" required></textarea>
+          <textarea type="text" placeholder="digite" required></textarea>
         </div>
       </section>
 
       <section id="buttonSection">
-        <button type="submit">Enviar</button> 
+        <button id="openChatModal"  type="submit">Enviar</button> 
       </section>
-      
+
           <div id="errorMessages" class="error-message"></div> 
+          
     </form>
+
+    
+
+    <script>
+      // Obtém todos os elementos de radio com a classe 'radioInput'
+const radioButtons = document.querySelectorAll('.radioInput');
+const textArea = document.querySelector('#textSection textarea');
+
+// Adiciona um ouvinte de evento de mudança para cada botão de radio
+radioButtons.forEach(function(radioButton) {
+  radioButton.addEventListener('change', function(event) {
+    // Obtém o valor do botão de radio selecionado e insere na área de texto
+    textArea.value = event.target.value;
+  });
+});
+
+      // Seleciona o elemento <textarea> dentro do textSection
+      const textSectionTextarea = document.querySelector('#textSection textarea');
+      const inputQuestionTextarea = document.getElementById('inputQuestion');
+  
+      // Adiciona um ouvinte de eventos para capturar a entrada de texto no textSection
+      textSectionTextarea.addEventListener('input', function() {
+        // Atualiza o conteúdo do inputQuestion com o texto inserido no textSection
+        inputQuestionTextarea.value = textSectionTextarea.value;
+      });
+    </script>
+
+    
+<script>
+  // JavaScript para controlar o Modal
+  const openChatModalBtn = document.getElementById('openChatModal');
+  const chatModal = document.getElementById('chatModal');
+  const closeChatModalBtn = document.getElementById('closeChatModal');
+
+  openChatModalBtn.addEventListener('click', function() {
+    chatModal.style.display = 'block';
+  });
+
+  closeChatModalBtn.addEventListener('click', function() {
+    chatModal.style.display = 'none';
+  });
+
+  window.onclick = function(event) {
+    if (event.target == chatModal) {
+      chatModal.style.display = 'none';
+    }
+  };7
+</script>
+
 
     <!-- Footer -->
     <footer>
@@ -89,7 +159,7 @@
           </p>
         </div>
       </div>
-      <div class="footerContainer">
+      <div class="footerCon tainer">  
         <ul class="Social">
           <li>Instagram</li>
           <li>Facebook</li>

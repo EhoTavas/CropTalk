@@ -1,4 +1,4 @@
-async function fetchData() {
+async function getAllPosts() {
   axios.get('http://localhost:8080/api/v1/solutions')
       .then(response => {
           console.log(response.data);
@@ -33,5 +33,5 @@ function displayData(data) {
   });
 }
 
-// Chama a função fetchData quando a página é carregada
-window.onload = fetchData;
+// Chama a função getAllPosts quando a página é carregada
+window.onload = getAllPosts;

@@ -18,7 +18,6 @@ import com.croptalk.app.services.TokenService;
 import com.croptalk.app.services.UserService;
 
 import lombok.AllArgsConstructor;
-import lombok.var;
 
 @RestController
 @RequestMapping(path = "api/v1/auth")
@@ -40,7 +39,7 @@ public class AuthController {
 
       var token = tokenService.generateToken((User) auth.getPrincipal());
 
-      return ResponseEntity.ok("Authentication complete, the token is: " + token);
+      return ResponseEntity.ok(token);
     } catch (AuthenticationException e) {
       return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Authentication failed: " + e.getMessage());
     }

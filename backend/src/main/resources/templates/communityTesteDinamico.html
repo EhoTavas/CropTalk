@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/css/communityCards.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../static/js/validationsCommunity.js"></script>
     <title>PI IV</title>
   </head>
 
@@ -41,21 +43,19 @@
   </section>
 
   <!-- Seção de barra de pesquisa + novos tópicos -->
-  <section id = "sectionContent">
-    
-  
+  <section id = "sectionContent"> 
     <!-- Novos tópicos -->
-    <div id = plus>
-      <img src = "../static/images/plus.png"/>
+    <div id = "plus">
+      <a href="/solutions"><img src = "../static/images/plus.png"/></a>
     </div>
 
-    <div id = newTopics>
-      <h3>Novos Tópicos</h3>
+    <div id = "newTopics">
+      <a href="/solutions"><h3>Novos Tópicos</h3></a>
     </div>
 
     <!-- Pesquisa -->
     <div id = "search">
-      <a href="https://www.bing.com"> <!-- Aqui tem que direcionar o que foi colocado na barra de pesquisa para achar o tópico pesquisado -->
+      <a href="/solutions"> <!-- Aqui tem que direcionar o que foi colocado na barra de pesquisa para achar o tópico pesquisado -->
         <img src = "../static/images/lupa.png"/>
       </a>      
       
@@ -73,7 +73,6 @@
   
   <!-- Seção dos cards e que gera eles -->
   <section class="sectionBackgroundContent" id = "sectionBackgroundContent">
-    
 
     
   
@@ -81,7 +80,7 @@
   
     <!-- Linka com o script que gera os cards -->
 
-  <script src="validationsCommunity.js"></script>
+ 
 
 
 

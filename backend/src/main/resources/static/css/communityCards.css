@@ -50,14 +50,15 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    margin-top: 50;
-    height: 900px;
+    margin-top: 50%;
+    height: auto;
     background: #DFE9C1;
     align-items: center;
     justify-content: space-evenly;
     margin: 5% 6%;
     border-radius: 15px;
-    z-index: 0;    
+    z-index: 0;  
+     
 }
 
 #infoTopics {
@@ -190,17 +191,6 @@
     
 }
 
-#search h3 {
-    display: flex;
-    position: relative;
-    font-size: 1.1rem;
-    left: 5%;
-    color: #0f0f0f;
-    
-    
-}
-
-
 #imputSearch {
     display: flex;
     position: absolute;
@@ -329,16 +319,17 @@ a {
 
 .Cards {
     display: flex;
-    position: relative;
     flex-direction: column;
     width: 90%;
-    height: 11%;
+    margin: 1em auto;
     background: #fefae0;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.286);
     transition: ease 0.7s;
     border: none;
+    padding: 1em;
 }
+
 
 
 .Cards img {
@@ -351,21 +342,76 @@ a {
 }
 
 
+.Cards h1 {
+    font-family: Arimo, sans-serif;
+    font-size: 130%;
+    color: #0f0f0f;
+    margin: 10px 50px;
+}
 
 
-.Cards h3 {
+.Cards h2 {
     font-size: 90%;
     color: #0f0f0f;
     margin: 5px 50px;
 }
 
 
-.Cards h4 {
+/* Modal pop-up para o card */
+
+@keyframes modalOpen {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+.Modal {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: #A9B489;
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 1000;
+    overflow: auto;
+    animation: modalOpen 0.5s ease-out;
+  }
+  
+
+.Modal h1{
     font-family: Arimo, sans-serif;
     font-size: 130%;
     color: #0f0f0f;
     margin: 10px 50px;
+    
 }
+
+.Modal h2 {
+    font-size: 90%;
+    color: #0f0f0f;
+    margin: 5px 50px;
+}
+
+.Modal button{
+    width: 100px;
+    height: 40px;
+    margin: 30px 50px;
+    border-radius: 15px;
+    border: none;
+    background: #b99470;
+    color: #fefae0;
+    transition: 0.3s ease;
+}
+
 
 
 /* Footer */

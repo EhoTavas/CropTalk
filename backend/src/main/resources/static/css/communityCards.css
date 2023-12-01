@@ -190,17 +190,6 @@
     
 }
 
-#search h3 {
-    display: flex;
-    position: relative;
-    font-size: 1.1rem;
-    left: 5%;
-    color: #0f0f0f;
-    
-    
-}
-
-
 #imputSearch {
     display: flex;
     position: absolute;

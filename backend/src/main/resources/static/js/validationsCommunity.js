@@ -15,6 +15,7 @@ async function getAllPosts() {
       });
 }
 
+
 function displayData(data, start) {
   const solutionsContainer = document.getElementById('sectionBackgroundContent');
 
@@ -50,10 +51,7 @@ function openModal(item) {
   // Adiciona a descrição ao modal
   const description = document.createElement("h2");
   description.textContent = item.applicationSolution;  // Supondo que 'applicationSolution' seja a descrição
-  modal.appendChild(description);
-
-
- 
+  modal.appendChild(description); 
 
   // Adiciona um botão para fechar o modal
   const closeButton = document.createElement("button");

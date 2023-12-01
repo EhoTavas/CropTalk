@@ -40,17 +40,20 @@ function displayData(data, start) {
 function openModal(item) {
   // Cria o elemento modal
   const modal = document.createElement("div");
-  modal.className = "modal";
+  modal.className = "Modal";
 
- // Adiciona o título ao modal
- const title = document.createElement("h2");
- title.textContent = item.solution;  // Supondo que 'solution' seja o título
- modal.appendChild(title);
+  // Adiciona o título ao modal
+  const title = document.createElement("h1");
+  title.textContent = item.solution;  // Supondo que 'solution' seja o título
+  modal.appendChild(title);
 
- // Adiciona a descrição ao modal
- const description = document.createElement("p");
- description.textContent = item.applicationSolution;  // Supondo que 'applicationSolution' seja a descrição
- modal.appendChild(description);
+  // Adiciona a descrição ao modal
+  const description = document.createElement("h2");
+  description.textContent = item.applicationSolution;  // Supondo que 'applicationSolution' seja a descrição
+  modal.appendChild(description);
+
+
+ 
 
   // Adiciona um botão para fechar o modal
   const closeButton = document.createElement("button");

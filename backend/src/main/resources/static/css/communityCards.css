@@ -352,16 +352,7 @@ a {
 }
 
 
-
-
-.Cards h3 {
-    font-size: 90%;
-    color: #0f0f0f;
-    margin: 5px 50px;
-}
-
-
-.Cards h4 {
+.Cards h1 {
     font-family: Arimo, sans-serif;
     font-size: 130%;
     color: #0f0f0f;
@@ -369,22 +360,68 @@ a {
 }
 
 
+.Cards h2 {
+    font-size: 90%;
+    color: #0f0f0f;
+    margin: 5px 50px;
+}
+
+
 /* Modal pop-up para o card */
-.modal {
+
+@keyframes modalOpen {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+.Modal {
     display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
-    margin: 10% auto;
-    background: #fff;
+    background: #A9B489;
+    border-radius: 15px;
     padding: 20px;
-    position: fixed;
     z-index: 1000;
     overflow: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    animation: modalOpen 0.5s ease-out;
   }
+  
+
+.Modal h1{
+    font-family: Arimo, sans-serif;
+    font-size: 130%;
+    color: #0f0f0f;
+    margin: 10px 50px;
+    
+}
+
+.Modal h2 {
+    font-size: 90%;
+    color: #0f0f0f;
+    margin: 5px 50px;
+}
+
+.Modal button{
+    width: 100px;
+    height: 40px;
+    margin: 30px 50px;
+    border-radius: 15px;
+    border: none;
+    background: #b99470;
+    color: #fefae0;
+    transition: 0.3s ease;
+}
+
 
 
 /* Footer */

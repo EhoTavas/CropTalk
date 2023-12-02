@@ -78,9 +78,6 @@
     flex-direction: row;
     left: 50px;
     align-items: flex-start;
-    
-
-
     transition: ease 0.5s;
 }
 
@@ -206,7 +203,7 @@
 #inputSearch {
     display: flex;
     position: absolute;
-    top: 13%;
+    top: 10%;
     left: 2%;
     width: 75%;
     height: 70%;

@@ -31,15 +31,6 @@ public class HomeController {
         return "community";
     }
 
-    @GetMapping("/communityPost")
-    public String communityPost() {
-        return "communityPost";
-    }
-
-    @GetMapping("/communityTesteDinamico")
-    public String communityTesteDinamico() {
-        return "communityTesteDinamico";
-    }
 
     @GetMapping("/postDetails")
     public String postDetails() {

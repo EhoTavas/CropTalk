@@ -61,9 +61,34 @@ function SendQuestion() {
       .finally(() => {
         inputQuestion.value = "";
         inputQuestion.focus();
+
         remainingQuestions--;
         updateRemainingQuestions(); // Atualiza o número restante após cada pergunta
-      });
+      });  
+        /*
+        inputQuestion.value = "";
+        inputQuestion.focus();
+        fetch("/api/v1/ServerCall/reduceNumber", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            num: remainingQuestions, // envia a quantidade atual de perguntas
+          }),
+        })
+          .then((response) => response.json())
+          .then((newRemainingQuestions) => {
+            // Atualiza a quantidade restante após cada pergunta
+            remainingQuestions = newRemainingQuestions;
+            updateRemainingQuestions();
+          })
+          .catch((error) => console.error("Error reducing question number:", error));
+          
+        inputQuestion.value = "";
+        inputQuestion.focus();
+        */
+      
 
     if (result.value) result.value += "\n\n\n";
 

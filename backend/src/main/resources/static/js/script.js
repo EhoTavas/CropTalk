@@ -13,6 +13,7 @@ sendButton.addEventListener("click", () => {
   if (inputQuestion.value) SendQuestion();
 });
 
+
 function updateRemainingQuestions() {
   if (remainingQuestions === 0) {
     inputQuestion.disabled = true;
@@ -20,7 +21,18 @@ function updateRemainingQuestions() {
   }
 
   const remainingQuestionsElement = document.getElementById("remainingQuestions");
-  remainingQuestionsElement.textContent = `${remainingQuestions} /5 perguntas`;  // Ajuste aqui para exibir a mensagem desejada
+
+  if (remainingQuestions ===-1)
+  {
+    remainingQuestionsElement.textContent = `Erro de conexão com o servidor`;
+    inputQuestion.disabled = true;
+    sendButton.disabled = true;
+
+  }
+  else
+  {
+    remainingQuestionsElement.textContent = `${remainingQuestions} /5 perguntas`;  // Ajuste aqui para exibir a mensagem desejada
+  }
 }
 
 updateRemainingQuestions(); // Atualiza o número restante inicialmente

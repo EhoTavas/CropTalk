@@ -10,6 +10,8 @@ import message.Resultado;
 
 import org.springframework.stereotype.Service;
 
+import com.croptalk.app.models.ReduceNumberResponse;
+
 import java.io.*;
 
 @Service
@@ -111,4 +113,9 @@ public class Cliente
 		{}
         return novoNum;
 	}
+
+
+    public Object reduce(ReduceNumberResponse num) {
+        return null;
+    }
 }

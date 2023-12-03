@@ -9,7 +9,7 @@ public class TestRequest {
 
     private int num;
 
-    public int getValor(){
+    public int getNum(){
         return num;
     }
 }

@@ -4,20 +4,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.croptalk.app.Cliente.Cliente;
-import com.croptalk.app.models.TestRequest;
+import com.croptalk.app.models.ReduceNumberResponse;
+
 
 @Service
-public class Test {
+public class ReduceNumberService {
     @Autowired
     private Cliente cliente;
 
 
-    public int teste (TestRequest num)
+    public int reduce (ReduceNumberResponse num)
     {
-        int numTeste = cliente.retornoNumeroPergunta(num.getNum());
+        int numReduce = cliente.retornoNumeroPergunta(num.getNum());
 
 
-        return numTeste;
+        return numReduce;
     }
 
 

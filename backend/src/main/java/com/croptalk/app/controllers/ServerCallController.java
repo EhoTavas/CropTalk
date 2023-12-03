@@ -10,23 +10,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.croptalk.app.Cliente.Cliente;
+import com.croptalk.app.models.ReduceNumberResponse;
+import com.croptalk.app.services.ReduceNumberService;
 
 
 @RestController
-@RequestMapping("/api/v1/ServerCall")
+@RequestMapping("/ServerCall")
 
 public class ServerCallController
 {
     @Autowired
-    private Cliente cliente;
+    private ReduceNumberService cliente;
 
     @PostMapping("/reduceNumber")
 
-    public ResponseEntity<Integer> reduceQuestion (@RequestBody int num)
+    public ResponseEntity<Integer> reduceQuestion (@RequestBody ReduceNumberResponse num)
     {
         try 
         {
-            return ResponseEntity.ok(cliente.retornoNumeroPergunta(num));
+            return ResponseEntity.ok(cliente.reduce(num));
         }
 
         catch (EmptyResultDataAccessException e){

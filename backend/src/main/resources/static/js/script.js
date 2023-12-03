@@ -18,7 +18,9 @@ function updateRemainingQuestions() {
     inputQuestion.disabled = true;
     sendButton.disabled = true;
   }
-  document.getElementById("remainingQuestions").textContent = `${remainingQuestions} /5 análises`;
+
+  const remainingQuestionsElement = document.getElementById("remainingQuestions");
+  remainingQuestionsElement.textContent = `${remainingQuestions} /5 perguntas`;  // Ajuste aqui para exibir a mensagem desejada
 }
 
 updateRemainingQuestions(); // Atualiza o número restante inicialmente
@@ -61,14 +63,7 @@ function SendQuestion() {
       .finally(() => {
         inputQuestion.value = "";
         inputQuestion.focus();
-
-        remainingQuestions--;
-        updateRemainingQuestions(); // Atualiza o número restante após cada pergunta
-      });  
-        /*
-        inputQuestion.value = "";
-        inputQuestion.focus();
-        fetch("/api/v1/ServerCall/reduceNumber", {
+        fetch("/ServerCall/reduceNumber", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -79,6 +74,7 @@ function SendQuestion() {
         })
           .then((response) => response.json())
           .then((newRemainingQuestions) => {
+            console.log("teste: "+newRemainingQuestions);
             // Atualiza a quantidade restante após cada pergunta
             remainingQuestions = newRemainingQuestions;
             updateRemainingQuestions();
@@ -87,7 +83,10 @@ function SendQuestion() {
           
         inputQuestion.value = "";
         inputQuestion.focus();
-        */
+      });  
+        
+        
+        
       
 
     if (result.value) result.value += "\n\n\n";

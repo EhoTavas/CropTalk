@@ -78,9 +78,6 @@
     flex-direction: row;
     left: 50px;
     align-items: flex-start;
-    
-
-
     transition: ease 0.5s;
 }
 
@@ -175,8 +172,6 @@
     height: 70%;
     margin: 0% 0%;
     background: #DFE9C1;
-   
-    
     border-radius: 15px;
     z-index: 2;
 }
@@ -188,10 +183,6 @@
     left: 85%;    
     width: 1.7rem;
     height: 1.7rem;
-
-    
-    
-
 }
 
 #search h3 {
@@ -204,30 +195,21 @@
     
 }
 
-#imputSearch {
+#search button {
+    border: none;
+    outline: none; 
+}
+
+#inputSearch {
     display: flex;
     position: absolute;
-    top: 13%;
+    top: 10%;
     left: 2%;
-    width: 85%;
+    width: 75%;
     height: 70%;
     margin: 0% 0%;
     background: #DFE9C1;
-   
-    
     border-radius: 15px;
-    
-}
-
-#imputSearch h3 {
-    display: flex;
-    position: relative;
-    font-size: 1.1rem;
-    top: -35%;
-
-    left: 8%;
-    color: #0f0f0f;
-    
     
 }
 

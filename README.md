@@ -13,10 +13,6 @@
 
  ##
    
-   ### Servidor:
-  Integrado com o site, haverá um servidor onde aramazenará os produtos dos parceiros.
-
-  
    ### Desenvolvedores:  
    <a href="https://github.com/EhoTavas/CropTalk/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=EhoTavas/CropTalk" />
